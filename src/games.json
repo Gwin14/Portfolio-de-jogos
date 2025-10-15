@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Click! Click Here!",
+    "image": "https://github.com/Gwin14/Click_Click_Here/raw/main/Assets/gameIcon.png",
+    "repo": "https://github.com/Gwin14/Click_Click_Here",
+    "releases": "https://api.github.com/repos/Gwin14/Click_Click_Here/releases",
+    "readme": "https://raw.githubusercontent.com/Gwin14/Click_Click_Here/main/README.md",
+    "widget": ""
+  },
+  {
+    "name": "Organic-Power",
+    "image": "https://img.itch.zone/aW1nLzEwNzkyMDk2LnBuZw==/315x250%23c/E8HBJU.png",
+    "repo": "https://github.com/Gwin14/Organic-Power",
+    "releases": "https://api.github.com/repos/Gwin14/Organic-Power/releases",
+    "readme": "https://raw.githubusercontent.com/Gwin14/Organic-Power/main/README.md",
+    "widget": "<iframe frameborder='0' src='https://itch.io/embed/1839150' width='552' height='167'><a href='https://gwin-14.itch.io/organic-power'>Organic Power by Fábio</a></iframe>"
+  },
+  {
+    "name": "jogo-nes-galAGA",
+    "image": "https://img.itch.zone/aW1nLzEwNjA4OTUyLmpwZWc=/original/UBaBea.jpeg",
+    "repo": "https://github.com/Gwin14/jogo-nes-galAGA",
+    "releases": "https://api.github.com/repos/Gwin14/jogo-nes-galAGA/releases",
+    "readme": "https://raw.githubusercontent.com/Gwin14/jogo-nes-galAGA/main/README.md",
+    "widget": "<iframe frameborder='0' src='https://itch.io/embed/1806652' width='552' height='167'><a href='https://gwin-14.itch.io/spacerunner'>Space Runner by Fábio</a></iframe>"
+  }
+]
