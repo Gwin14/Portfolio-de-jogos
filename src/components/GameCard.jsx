@@ -9,13 +9,10 @@ export default function GameCard({ game }) {
   };
 
   return (
-    <div
-      className="game-card"
-      onClick={handleClick}
-      style={{ cursor: "pointer" }}
-    >
-      <h2 className="game-card__title">{game.name}</h2>
+    <div className="game-card cursor-target" onClick={handleClick}>
       <img className="game-card__image" src={game.image} alt={game.name} />
+      <h2 className="game-card__title">{game.name}</h2>
+      <p className="game-card__description">jogo massa</p>
     </div>
   );
 }

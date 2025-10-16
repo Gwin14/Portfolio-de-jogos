@@ -1,0 +1,32 @@
+.game-screen {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.game-content {
+  padding: 20px;
+}
+
+.back-button {
+  margin-bottom: 20px;
+}
+
+.game-image {
+  width: 105%;
+
+  max-height: 30dvh;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+  margin: auto;
+}
+
+.readme-section {
+  margin-top: 20px;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
