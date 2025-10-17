@@ -5,6 +5,7 @@ import { getReadme } from "../services/githubServices";
 import ReactMarkdown from "react-markdown"; // 👈 importa aqui
 import TargetCursor from "../components/TargetCursor";
 import "./GameScreen.css";
+import GithubButton from "../components/GithubButton";
 
 export default function GameScreen() {
   const { gameName } = useParams();
@@ -22,6 +23,18 @@ export default function GameScreen() {
         setError("Não foi possível carregar o README ou o arquivo não existe")
       );
   }, [game]);
+
+  useEffect(() => {
+    // aplica a classe a todos os links (inclusive os do markdown)
+    const links = document.querySelectorAll("a");
+    links.forEach((el) => el.classList.add("cursor-target"));
+  }, [readme]);
+
+  useEffect(() => {
+    // aplica a classe a todos os links (inclusive os do markdown)
+    const iframe = document.querySelector("iframe");
+    iframe.classList.add("cursor-target");
+  }, []);
 
   if (!game) {
     return (
@@ -47,37 +60,32 @@ export default function GameScreen() {
       </button>
       <TargetCursor spinDuration={2} hideDefaultCursor={true} />
 
-      <img
-        className="cursor-target game-image"
-        src={game.image}
-        alt={game.name}
-      />
+      <img className="game-image" src={game.image} alt={game.name} />
 
       <section className="game-content">
-        <h1>{game.name}</h1>
+        <h1 className="game-title">{game.name}</h1>
         <div>
-          <h3>Links:</h3>
           <a
             className="cursor-target"
             href={game.repo}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Repositório GitHub
+            <GithubButton />{" "}
           </a>
+
           <br />
-          <a
+          {/* <a
             className="cursor-target"
             href={game.releases}
             target="_blank"
             rel="noopener noreferrer"
           >
             Releases
-          </a>
+          </a> */}
         </div>
         <div dangerouslySetInnerHTML={{ __html: game.widget }} />
-        <div className="cursor-target readme-section">
-          <h3>README:</h3>
+        <div className="readme-section">
           {error ? (
             <p>{error}</p>
           ) : readme ? (
