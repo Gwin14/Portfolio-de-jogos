@@ -13,7 +13,7 @@ function App() {
           path="/"
           element={
             <main>
-              <h1>Jogos</h1>
+              <h1 className="main-title">Jogos</h1>
               <TargetCursor spinDuration={2} hideDefaultCursor={true} />
 
               <section className="games-container">

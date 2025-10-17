@@ -12,7 +12,10 @@ export default function GameCard({ game }) {
     <div className="game-card cursor-target" onClick={handleClick}>
       <img className="game-card__image" src={game.image} alt={game.name} />
       <h2 className="game-card__title">{game.name}</h2>
-      <p className="game-card__description">jogo massa</p>
+      <p className="game-card__description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi odit
+        vitae impedit cupiditate officia tenetur eum?
+      </p>
     </div>
   );
 }

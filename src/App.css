@@ -18,3 +18,9 @@ main {
   height: 100%;
   gap: 10px;
 }
+
+.main-title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  margin: 30px;
+}
