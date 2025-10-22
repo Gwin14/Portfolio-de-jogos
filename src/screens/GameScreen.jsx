@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown"; // 👈 importa aqui
 import TargetCursor from "../components/TargetCursor";
 import "./GameScreen.css";
 import GithubButton from "../components/GithubButton";
+import { Helmet } from "react-helmet-async";
 
 export default function GameScreen() {
   const { gameName } = useParams();
@@ -52,6 +53,39 @@ export default function GameScreen() {
 
   return (
     <div className="game-screen">
+      <img className="game-background" src={game.image} alt={game.name} />
+      <img className="game-background blur" src={game.image} alt={game.name} />
+
+      {/* HELMET --------- */}
+      <Helmet>
+        <title>{game.name} – Portfólio de Jogos</title>
+        <meta
+          name="description"
+          content={
+            game.description || "Confira este jogo criado por Fábio Santos!"
+          }
+        />
+
+        {/* OG tags */}
+        <meta property="og:title" content={game.name} />
+        <meta
+          property="og:description"
+          content={game.description || game.name}
+        />
+        <meta property="og:image" content={game.image} />
+        <meta
+          property="og:url"
+          content={`https://fabiosantos.dev.br/${encodeURIComponent(
+            game.name
+          )}`}
+        />
+
+        {/* Favicon dinâmico */}
+        <link rel="icon" type="image/png" href={game.image} />
+      </Helmet>
+
+      {/* HELMET --------- */}
+
       <button
         className="cursor-target back-button"
         onClick={() => navigate("/")}
