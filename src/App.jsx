@@ -12,6 +12,7 @@ import TargetCursor from "./components/TargetCursor";
 import { Helmet } from "react-helmet-async";
 import siteLogo from "./assets/site-logo.png";
 import { AnimatePresence, motion } from "framer-motion";
+import SocialLinks from "./components/SocialLinks";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -60,6 +61,7 @@ function AnimatedRoutes() {
                   <GameCard key={game.name} game={game} />
                 ))}
               </section>
+              <SocialLinks />
             </motion.main>
           }
         />
