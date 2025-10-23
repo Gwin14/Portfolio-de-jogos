@@ -13,6 +13,7 @@
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.2);
+  animation: background-fade 0.5s ease-in-out;
 }
 
 .blur {
@@ -106,5 +107,14 @@ ul {
 @media (min-width: 1200px) {
   .game-image {
     border-radius: 0px 0px 10px 10px;
+  }
+}
+
+@keyframes background-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
