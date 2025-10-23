@@ -26,7 +26,7 @@
 }
 
 .button:hover {
-  background-color: transparent;
+  background-color: white;
 }
 
 .button:hover .text {

@@ -15,3 +15,7 @@ body {
   justify-content: start;
   /* background-color: black; */
 }
+
+a {
+  color: crimson;
+}

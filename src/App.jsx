@@ -1,29 +1,36 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import games from "./games.json";
 import GameCard from "./components/GameCard";
 import GameScreen from "./screens/GameScreen";
 import TargetCursor from "./components/TargetCursor";
 import { Helmet } from "react-helmet-async";
 import siteLogo from "./assets/site-logo.png";
+import { AnimatePresence, motion } from "framer-motion";
 
-function App() {
+function AnimatedRoutes() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        {/* Página inicial */}
         <Route
           path="/"
           element={
-            <main>
+            <motion.main
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
               {/* HELMET --------- */}
               <Helmet>
                 <title>Portfólio de Jogos - Fábio Santos</title>
                 <meta
                   name="description"
-                  content={"Confira estes jogos criado por Fábio Santos!"}
+                  content={"Confira estes jogos criados por Fábio Santos!"}
                 />
-
-                {/* OG tags */}
                 <meta
                   property="og:title"
                   content="Portfólio de Jogos - Fábio Santos"
@@ -35,11 +42,8 @@ function App() {
                 <meta property="og:image" content={siteLogo} />
                 <meta
                   property="og:url"
-                  content={`https://fabiosantos.dev.br/
-                  `}
+                  content={`https://fabiosantos.dev.br/`}
                 />
-
-                {/* Favicon dinâmico */}
                 <link rel="icon" type="image/png" href={siteLogo} />
               </Helmet>
               {/* HELMET --------- */}
@@ -51,11 +55,33 @@ function App() {
                   <GameCard key={game.name} game={game} />
                 ))}
               </section>
-            </main>
+            </motion.main>
           }
         />
-        <Route path="/game/:gameName" element={<GameScreen />} />
+
+        {/* Página do jogo */}
+        <Route
+          path="/game/:gameName"
+          element={
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
+              <GameScreen />
+            </motion.div>
+          }
+        />
       </Routes>
+    </AnimatePresence>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AnimatedRoutes />
     </Router>
   );
 }
