@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet-async";
 import siteLogo from "./assets/site-logo.png";
 import { AnimatePresence, motion } from "framer-motion";
 import SocialLinks from "./components/SocialLinks";
+import DotGrid from "./components/DotGrid";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -53,6 +54,27 @@ function AnimatedRoutes() {
                 <link rel="icon" type="image/png" href={siteLogo} />
               </Helmet>
               {/* HELMET --------- */}
+
+              <div
+                style={{
+                  width: "100vw",
+                  height: "100dvh",
+                  position: "fixed",
+                  zIndex: -1000,
+                }}
+              >
+                <DotGrid
+                  dotSize={2}
+                  gap={15}
+                  baseColor="#5227FF"
+                  activeColor="#5227FF"
+                  proximity={120}
+                  shockRadius={250}
+                  shockStrength={5}
+                  resistance={750}
+                  returnDuration={1.5}
+                />
+              </div>
 
               <h1 className="main-title">Meus jogos</h1>
               <TargetCursor spinDuration={2} hideDefaultCursor={true} />
