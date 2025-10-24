@@ -1,4 +1,5 @@
 .game-screen {
+  width: 100vw;
   max-width: 1200px;
   margin: auto;
   position: relative; /* para posicionar o botão dentro do contêiner */
@@ -104,9 +105,24 @@ ul {
   border-radius: 10px;
 }
 
+iframe {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
 @media (min-width: 1200px) {
   .game-image {
     border-radius: 0px 0px 10px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .game-content {
+    padding: 10px;
+  }
+
+  .target-cursor-wrapper {
+    display: none;
   }
 }
 
