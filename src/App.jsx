@@ -54,7 +54,7 @@ function AnimatedRoutes() {
               </Helmet>
               {/* HELMET --------- */}
 
-              <h1 className="main-title">Jogos</h1>
+              <h1 className="main-title">Meus jogos</h1>
               <TargetCursor spinDuration={2} hideDefaultCursor={true} />
               <section className="games-container">
                 {games.map((game) => (
