@@ -5,7 +5,8 @@
     "repo": "https://github.com/Gwin14/Click_Click_Here",
     "releases": "https://api.github.com/repos/Gwin14/Click_Click_Here/releases",
     "readme": "https://raw.githubusercontent.com/Gwin14/Click_Click_Here/main/README.md",
-    "widget": "<iframe frameborder='0' src='https://itch.io/embed/3966693' width='552' height='167'><a href='https://gwin-14.itch.io/click-click-here'>Click! Click Here! by Fábio</a></iframe>"
+    "widget": "<iframe frameborder='0' src='https://itch.io/embed/3966693' width='552' height='167'><a href='https://gwin-14.itch.io/click-click-here'>Click! Click Here! by Fábio</a></iframe>",
+    "description": "Um jogo em que o jogador inspeciona email e pedidos de acesso suspeitos em uma organização"
   },
   {
     "name": "Organic-Power",
@@ -13,7 +14,8 @@
     "repo": "https://github.com/Gwin14/Organic-Power",
     "releases": "https://api.github.com/repos/Gwin14/Organic-Power/releases",
     "readme": "https://raw.githubusercontent.com/Gwin14/Organic-Power/main/README.md",
-    "widget": "<iframe frameborder='0' src='https://itch.io/embed/1839150' width='552' height='167'><a href='https://gwin-14.itch.io/organic-power'>Organic Power by Fábio</a></iframe>"
+    "widget": "<iframe frameborder='0' src='https://itch.io/embed/1839150' width='552' height='167'><a href='https://gwin-14.itch.io/organic-power'>Organic Power by Fábio</a></iframe>",
+    "description": "Desvende os quebra-cabeças e restaure a harmonia em Organic Power!"
   },
   {
     "name": "jogo-nes-galAGA",
@@ -21,6 +23,7 @@
     "repo": "https://github.com/Gwin14/jogo-nes-galAGA",
     "releases": "https://api.github.com/repos/Gwin14/jogo-nes-galAGA/releases",
     "readme": "https://raw.githubusercontent.com/Gwin14/jogo-nes-galAGA/main/README.md",
-    "widget": "<iframe frameborder='0' src='https://itch.io/embed/1806652' width='552' height='167'><a href='https://gwin-14.itch.io/spacerunner'>Space Runner by Fábio</a></iframe>"
+    "widget": "<iframe frameborder='0' src='https://itch.io/embed/1806652' width='552' height='167'><a href='https://gwin-14.itch.io/spacerunner'>Space Runner by Fábio</a></iframe>",
+    "description": "Combate os invasores alienígenas neste jogo de tiro espacial inspirado no clássico Galaga."
   }
 ]

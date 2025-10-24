@@ -29,10 +29,7 @@ export default function GameCard({ game }) {
       )}
       <img className="game-card__image" src={game.image} alt={game.name} />
       <h2 className="game-card__title">{game.name}</h2>
-      <p className="game-card__description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi odit
-        vitae impedit cupiditate officia tenetur eum?
-      </p>
+      <p className="game-card__description">{game.description}</p>
     </div>
   );
 }
