@@ -27,8 +27,16 @@ export default function GameCard({ game }) {
           />
         </div>
       )}
+
       <img className="game-card__image" src={game.image} alt={game.name} />
-      <h2 className="game-card__title">{game.name}</h2>
+      <div>
+        <h2 className="game-card__title">{game.name}</h2>
+        <img
+          className="game-card__engine-icon"
+          src={game.engineIcon}
+          alt="engine icon"
+        />
+      </div>
       <p className="game-card__description">{game.description}</p>
     </div>
   );

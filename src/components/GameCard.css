@@ -8,6 +8,13 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: black;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
 .game-card:hover {
@@ -37,4 +44,11 @@
   text-align: justify;
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.game-card__engine-icon {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin: 0;
 }
